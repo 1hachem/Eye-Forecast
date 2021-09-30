@@ -5,7 +5,7 @@ import urllib
 import urllib.request
 import time
 
-driverPath = r"/home/dedsec/img-web-scrap/chromedriver" #insert your chromedriver path here 
+driverPath = r"insert your chromedriver path here" 
 
 linkPrefix = "https://www.google.com/search?q="
 linkSuffix = "&sxsrf=AOaemvJltkJx9YryOUmZYZwu6cdhVjOFQw:1631437222344&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjSmfGgifnyAhXBzKQKHYigArgQ_AUoAXoECAEQAw&biw=952&bih=968" #can be changed
@@ -43,9 +43,6 @@ def downloadImages(saveFolder):
         if lastCount==lenOfPage:
             match=True
 
-    
-        
-    
     elm1 = driver.find_element_by_id('islmp')
     sub = elm1.find_elements_by_tag_name('img')
     j = 0
@@ -63,7 +60,7 @@ def downloadImages(saveFolder):
                     pass
             except Exception as e:
                 print("failed" + e)
-    
+                
     driver.close()
 
 
